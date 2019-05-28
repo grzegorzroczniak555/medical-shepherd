@@ -9,6 +9,15 @@ import Platform from "../services/Platform";
 import { SideNav } from "./modals/SideNav";
 import { mergeStyles } from "@uifabric/merge-styles";
 
+
+function init() {
+  document.addEventListener("deviceready",onDeviceReady, false);
+  }
+
+function onDeviceReady() {
+  navigator.notification.beep(1);
+  }
+
 const f7params = {
   id: config.appId,
   name: config.name,
